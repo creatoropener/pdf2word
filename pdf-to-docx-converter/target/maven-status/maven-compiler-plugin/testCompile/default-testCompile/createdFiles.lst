@@ -1,0 +1,3 @@
+com/cometfile/pdf2docx/inference/LineBuilderTest.class
+com/cometfile/pdf2docx/api/PdfToDocxConverterIntegrationTest.class
+com/cometfile/pdf2docx/golden/GoldenFileRegressionTest.class

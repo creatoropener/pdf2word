@@ -1,0 +1,3 @@
+/workspaces/Pdf2word/pdf-to-docx-converter/src/test/java/com/cometfile/pdf2docx/api/PdfToDocxConverterIntegrationTest.java
+/workspaces/Pdf2word/pdf-to-docx-converter/src/test/java/com/cometfile/pdf2docx/golden/GoldenFileRegressionTest.java
+/workspaces/Pdf2word/pdf-to-docx-converter/src/test/java/com/cometfile/pdf2docx/inference/LineBuilderTest.java
