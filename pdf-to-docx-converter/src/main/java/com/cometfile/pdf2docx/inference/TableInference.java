@@ -28,8 +28,9 @@ import java.util.TreeMap;
 class TableInference {
 
     private static final float COLUMN_X_TOLERANCE = 4.0f;
-    private static final int MIN_ROWS_FOR_TABLE = 3;
-    private static final int MIN_COLUMNS_FOR_TABLE = 2;
+    // Fix: Stricter limits to permanently protect paragraphs from turning into false tables
+    private static final int MIN_ROWS_FOR_TABLE = 5;      
+    private static final int MIN_COLUMNS_FOR_TABLE = 6;
 
     record TableRegion(int startLine, int endLineExclusive, TableBlock table) {
     }
