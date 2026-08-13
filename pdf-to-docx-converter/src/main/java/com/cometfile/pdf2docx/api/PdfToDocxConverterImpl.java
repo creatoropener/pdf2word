@@ -40,7 +40,14 @@ public class PdfToDocxConverterImpl implements PdfToDocxConverter {
                 pages.add(inferenceEngine.buildPage(extractedPage, images));
             }
 
-            return docxGenerator.generate(new DocumentModel(pages));
+            // ADJUSTMENT: Assemble the document model structure
+            DocumentModel documentModel = new DocumentModel(pages);
+
+            // ADJUSTMENT: Run our custom Layout Inspector to dump the issue list to terminal
+            com.cometfile.pdf2docx.cli.LayoutInspector.inspect(documentModel, System.out);
+
+            // Continue with original generation flow
+            return docxGenerator.generate(documentModel);
 
         } catch (IOException e) {
             throw new ConversionException("Failed to convert PDF to DOCX", e);
